@@ -1,0 +1,48 @@
+@import "vendor/normalize.css";
+@import "palette.less";
+@import "mixin.less";
+
+.media-browser {
+	padding: 3em;
+
+	.back {
+		background: transparent;
+	}
+}
+
+a {
+	display: block;
+	cursor: pointer;
+	padding: .5em;
+	margin: .5em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.directory {
+	width: 20%;
+	float: left;
+
+	a {
+		background-color: yellow;
+	}
+}
+
+.file {
+	width: 80%;
+	float: right;
+
+	a {
+		background-color: gray;
+	}
+}
+
+.attached {
+	p {
+		cursor: pointer;
+	}
+	p:hover {
+		background: red;
+	}
+}
+
