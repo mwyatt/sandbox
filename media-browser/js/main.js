@@ -26,7 +26,7 @@ var mediaBrowser = {
 		for (var i = 0; i < mediaBrowser.directoryTree.length; i++) {
 			directoryRequest += mediaBrowser.directoryTree[i];
 		};
-		$.getJSON('http://localhost/github/sandbox/media-browser/browse.php?o[method]=getDirectory&o[action]=' + directoryRequest, function(results) {
+		$.getJSON('browse.php?o[method]=getDirectory&o[action]=' + directoryRequest, function(results) {
 			if (results) {
 				directoryRequest += directory;
 				$(mediaBrowser.file).html('');
@@ -63,7 +63,7 @@ var mediaBrowser = {
 	},
 
 	attachFile: function(path) {
-		$.getJSON('http://localhost/github/sandbox/media-browser/browse.php?o[method]=getFile&o[action]=' + path, function(results) {
+		$.getJSON('browse.php?o[method]=getFile&o[action]=' + path, function(results) {
 			if (results) {
 				if (results['extension'] == 'png' || results['extension'] == 'jpg' || results['extension'] == 'gif') {
 					$(mediaBrowser.attached).find('.image').append('<p><img src="' + results.guid + '" alt="" width="100">' + path + '</p>');
