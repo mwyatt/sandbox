@@ -3,46 +3,201 @@
 @import "mixin.less";
 
 .media-browser {
-	padding: 3em;
+	padding: 1em;
+	font-size: .7em;
+	margin: 1em;
+	border: 1px solid darken(@white, 10%);
+	position: relative;
+	background-repeat: no-repeat;
+
+	h1, h2, h3, h4 {
+		margin: 0 0 1em;
+	}
 
 	.back {
-		background: transparent;
+		background-color: red;
+		margin: 0 0 1em;
+		text-decoration: none;
+		color: @white;
 	}
-}
 
-a {
-	display: block;
-	cursor: pointer;
-	padding: .5em;
-	margin: .5em;
-	font-size: 1.2em;
-	font-weight: bold;
-}
+	.remove {
+		float: right;
+		background-color: red;
+		color: @white;
+		line-height: 1em;
+		padding: 0.1em 0.3em;
 
-.directory {
-	width: 20%;
-	float: left;
+		&:hover {
+			background-color: red;
+			color: @white;
+		}
+	}
+
+	.upload {
+		background: green;
+		padding: 1em;
+		color: @white;
+
+		input#form_images {
+			display: block;
+			height: 8em;
+			width: 16.3em;
+
+			&:hover {
+				background: lighten(green, 10%);
+			}
+		}
+	}
+
+	.new {
+		padding: 1em;
+		margin: 1em 0;
+		background-color: darken(@white, 5%);
+		border: 1px solid darken(@white, 10%);
+
+		input[type="text"] {
+			margin: 0 0 1em;
+			display: block;
+			width: 100%;
+			padding: .3em;
+		}
+
+		.submit {
+			float: right;
+			display: inline;
+			background-color: green;
+			color: @white;
+			text-decoration: none;
+			margin: 0;
+			padding: 0.4em 0.6em 0.5em;
+			font-size: 1em;
+		}
+	}
+
+	label {
+		margin: 0 0 1em;
+		display: block;
+	}
+
+	.attached {
+		padding: 1em;
+		border: 1px solid darken(@white, 10%);
+		margin: 0 0 1em;
+
+		.image a {
+			background-color: darken(@white, 5%);
+			border: 1px solid darken(@white, 10%);
+			margin: 1em 0 0;
+
+			&:hover {
+				border-color: red;
+			}
+		}
+	}
+
+	img {
+		max-width: 5em;
+		max-height: 5em;
+		float: left;
+		margin: 0 1em 1em 0;
+	}
 
 	a {
-		background-color: yellow;
-	}
-}
-
-.file {
-	width: 80%;
-	float: right;
-
-	a {
-		background-color: gray;
-	}
-}
-
-.attached {
-	p {
+		display: block;
 		cursor: pointer;
+		padding: .5em;
+		margin: .5em;
+		font-size: 1.2em;
+		font-weight: bold;
 	}
-	p:hover {
-		background: red;
+
+	.left-col {
+		width: 20%;
+		float: left;
+	}
+
+	.directory {
+
+		a.folder {
+			margin: 0;
+			background-color: #fbf7b4;
+			color: darken(#c1a64b, 30%);
+			border-top: 1px solid darken(#fbf7b4, 40%);
+
+			.remove {
+				background-color: darken(#c1a64b, 30%);
+			}
+		}
+	}
+
+	.file {
+		width: 78%;
+		float: right;
+
+		.remove {
+			color: darken(@white, 50%);
+			background-color: darken(@white, 15%);
+		}
+	}
+
+	.pdf,
+	.image {
+		margin: 0 0 1em;
+	}
+
+	.file,
+	.attached {
+		// .img {
+		// 	background-image: url('../img/sprite-100.png');
+		// 	background-position: 61px 64px;
+		// 	display: block;
+		// 	float: left;
+		// 	width: 1.4em;
+		// 	height: 1.7em;
+		// 	margin: 0 1em 1em 0;
+		// }
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.file a,
+	.attached a {
+			text-decoration: none;
+			color: darken(@white, 50%);
+			background-color: darken(@white, 5%);
+			border-top: 1px solid darken(@white, 20%);
+			// float: left;
+			// width: 18.5em;
+			margin: 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+	}
+
+	.attached {
+
+		p {
+			cursor: pointer;
+		}
+		a:hover {
+			background-color: red;
+			border-collapse: red;
+			color: white;
+		}
+	}
+
+	.bread {
+		margin: 0 0 1em;
+		font-weight: bold;
+		background-color: darken(@white, 5%);
+		border: 1px solid darken(@white, 10%);
+		padding: .5em;
+		cursor: default;
 	}
 }
+
 
