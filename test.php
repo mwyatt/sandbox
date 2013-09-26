@@ -1,12 +1,12 @@
-<?php 
-function isNew($timeAdded)
-    {
-        if ($timeAdded < 14) {
-            return true;
-        }
-    }
+    <?php ob_start() ?> 
 
+        <tr>
+            <th></th>
 
-var_dump(isNew(20))
+    <?php $tableRows['head'] = ob_end_flush() ?>
 
- ?>
+    <?php echo '<pre>';
+    print_r($tableRows);
+    echo '</pre>';
+    exit;
+     ?>
