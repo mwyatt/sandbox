@@ -7,14 +7,14 @@
 				"name": "Web and Multimedia BSC Hons, University of Central Lancashire",
 				"achivements": [
 					"Awarded: 2:1",
-					"Modules: Audio, Basic Video, connections, Graphics design, Interactive media production, Javascript, Actionscript, Interactive authoring, Interactive design"
+					"Modules: Graphics design, Interactive media production, Audio, Basic Video, Connections, Javascript, Actionscript, Interactive authoring, Interactive design"
 				]
 			},
 			{
 				"date": "2004-2006",
 				"name": "AVCE ICT, Burnley College",
 				"achivements": [
-					"Awarded: A|B (equivalent to two A levels)"
+					"Awarded: A, B (equivalent to two A levels)"
 				]
 			},
 			{
@@ -34,7 +34,7 @@
 				"date": "2012-Present",
 				"name": "Web Designer, AV Distribution",
 				"achivements": [
-					"Responsive, mobile first ecommerce web design",
+					"Responsive, mobile first e-commerce web design, cross browser tested (Oracle VM VirtualBox)",
 					"Several other responsive brochure websites to promote products or brands",
 					"/admin/ area: product creation, ebay lister, exception system (returns), stock control software, barcode scanning",
 					"Logo redesign and production of new brands",
@@ -47,26 +47,24 @@
 				"achivements": [
 					"Full web designs using Photoshop",
 					"Logo design (predominantly Illustrator)",
-					"Email newsletter design",
-					"Print: Business cards, promotional fliers",
+					"Email newsletter design and implementation",
 					"Wordpress development, Javascript, CSS, HTML, PHP",
-					"Presenting logo/web designs to clients and discussing needs"
+					"Presenting logo/web designs to clients and discussing needs",
+					"Print: Business cards, promotional fliers"
 				]
 			},
 			{
 				"date": "2005-2010",
-				"name": "Warehouse, ASDA Burnley",
+				"name": "Warehouse Assistant, ASDA Burnley",
 				"achivements": [
 					"Worked within the warehouse department, unloading articulated vehicles and general maintenance",
-					"Scanned overstock using telson device to palletise stock which would be used on the shop floor during the night shift"
+					"Scanned overstock using Telxon device to palletise stock which would be used on the shop floor during the night shift"
 				]
 			},
 			{
 				"date": "Autumn 2004",
 				"name": "Stall Assistant, Joanne's Card Stall, Burnley Market",
-				"achivements": [
-					"Punctuality, organisation"
-				]
+				"achivements": []
 			},
 			{
 				"date": "Autumn 2002, 2003",
@@ -86,7 +84,7 @@
 		"paragraphs": [
 			"Keeping current with web design &amp; development (Feedly)",
 			"Competitive Table Tennis: agility, speed, social, accuracy, team work, focus and coordination",
-			"American pool, english pool, snooker ",
+			"American pool, English pool, snooker ",
 			"Gaming: Hearthstone, Mario Kart 8, Diablo III, Starcraft II"
 		]
 	}
