@@ -1,0 +1,22 @@
+{
+    "name": "orno/http",
+    "description": "A wrapper for Symfony\\HttpFoundation with some encapsulation and convenience methods.",
+    "keywords": ["orno", "http", "request", "response"],
+    "homepage": "http://github.com/orno/http",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4",
+        "symfony/http-foundation": "2.*"
+    },
+    "authors": [
+        {
+            "name": "Phil Bennett",
+            "email": "philipobenito@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Orno\\Http\\": "src/"
+        }
+    }
+}
