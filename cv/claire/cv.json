@@ -1,0 +1,107 @@
+[
+	{
+		"name": "Education",
+		"children": [
+			{
+				"date": "2009-2013",
+				"name": "French and English BA Hons, University of Warwick",
+				"achivements": [
+					"Awarded: First Class with Honours",
+					"Societies: World@Warwick, French Society, Warwick Cinema Society"
+				]
+			},
+			{
+				"date": "2007-2009",
+				"name": "St Mary's College Blackburn",
+				"achivements": [
+					"Awarded: 5 x A Levels: 5 x A",
+				        "English Extension Award - Distinction",
+					"WJEC Award for Highest English Language A Level Results in the UK"
+				]
+			},
+			{
+				"date": "2002-2007",
+				"name": "Blessed Trinity RC College",
+				"achivements": [
+					"10 x GCSEs - 9 x A*, 1 x A (including Maths and English)",
+					"1 x A/S Level - A",
+					"Deputy Head Girl 2006-7 and member of the school council",
+					"English Speaking Board examinations - 2 x Distinction Awards"
+				]
+			}
+		]
+	},
+	{
+		"name": "Employment",
+		"children": [
+			{
+				"date": "2014-Present",
+				"name": "French Digital Marketing Executive, Trueshopping Group",
+				"achivements": [
+					"Manage PPC accounts on Bing and Google AdWords for French and North American websites.",
+					"Provide French content for product descriptions, translations and category descriptions.",
+					"Research, publish and promote blog articles in French as part of our global SEO strategy.",
+					"Manage social media strategy in French, including Facebook, Twitter, Google+ and Pinterest.",
+					"Manage CSEs and affiliates in English and French."
+				]
+			},
+			{
+				"date": "2013-2014",
+				"name": "French Post Sales Advisor, Trueshopping Group",
+				"achivements": [
+					"Answered customer queries by phone and email (CRMs) in French and English.",
+					"Translated technical installation guides from English into French.",
+					"Achieved NCFE Level 2 Certificate in Customer Service Knowledge. "
+				]
+			},
+			{
+				"date": "2011-2012",
+				"name": "British Council Language Assistant, Lycée François Mauriac and Collège Georges Rayet (Bordeaux, France)",
+				"achivements": [
+					"Prepared and taught English language lessons to middle school and high school students aged from 12-20.",
+					"Established a correspondence between a French high school (lycée) and my former high school.",
+					"Privately tutored a student on a one-to-one basis."
+				]
+			},
+			{
+				"date": "November 2012",
+				"name": "Work Experience - Content Writer, Cognitive Publishing Limited",
+				"achivements": [
+					"Researched and produced news articles and online content for all of the company’s magazines."
+				]
+			},
+			{
+				"date": "Spring 2012",
+				"name": "Work Experience - Translator/Content Writer, Brick Technology Limited",
+				"achivements": [
+					"Worked on the French translation and English copy of the website."
+				]
+			},
+			{
+				"date": "Summer 2011, 2012",
+				"name": "Work Experience - French Language Assistant, Wellfield Methodist & Anglican Church School",
+				"achivements": [
+					"Taught French lessons and created French resources for primary school children."
+				]
+			},
+			{
+				"date": "March 2006",
+				"name": "Work Experience - Junior Librarian, Burnley Central Library",
+				"achivements": []
+			}
+		]
+	},
+	{
+		"name": "Key Skills",
+		"paragraphs": [
+			"Microsoft Word, Powerpoint, Excel, Magento and Photoshop. Google AdWords and Analytics Certified. Bi-lingual."
+		]
+	},
+	{
+		"name": "Interests &amp; Activities",
+		"paragraphs": [
+			"Languages, literature, writing, gaming and yoga.",
+			"Please see my blog: claireruth.com"
+		]
+	}
+]

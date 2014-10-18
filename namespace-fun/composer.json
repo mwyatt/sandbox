@@ -2,5 +2,10 @@
     "require": {
         "symfony/routing": "2.6.*@dev",
         "orno/route": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Martin\\Sumo\\": "src"
+        }
     }
 }

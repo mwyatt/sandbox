@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Orno\\Route\\' => array($vendorDir . '/orno/route/src'),
     'Orno\\Http\\' => array($vendorDir . '/orno/http/src'),
+    'Martin\\Sumo\\' => array($baseDir . '/src'),
 );
