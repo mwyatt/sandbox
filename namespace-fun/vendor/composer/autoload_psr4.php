@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Sumo\\' => array($baseDir . '/sumo/class'),
     'Orno\\Route\\' => array($vendorDir . '/orno/route/src'),
     'Orno\\Http\\' => array($vendorDir . '/orno/http/src'),
-    'Martin\\Sumo\\' => array($baseDir . '/src'),
 );

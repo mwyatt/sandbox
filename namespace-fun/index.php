@@ -2,9 +2,7 @@
 
 include 'vendor/autoload.php';
 
-use Martin\Sumo;
-
-$system = new Martin\Sumo\System();
+$system = new Sumo\System();
 echo '<pre>';
 print_r($system);
 echo '</pre>';

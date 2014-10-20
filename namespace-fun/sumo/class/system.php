@@ -1,6 +1,6 @@
 <?php
 
-namespace Martin\Sumo;
+namespace Sumo;
 
 
 class System
