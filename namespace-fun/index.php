@@ -4,6 +4,7 @@ include 'vendor/autoload.php';
 
 $system = new Sumo\System();
 $controller = new Sumo\Site\Avo\Controller\Index();
+$controller->test();
 echo '<pre>';
 print_r($controller);
 echo '</pre>';
