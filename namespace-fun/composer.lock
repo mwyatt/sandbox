@@ -1,0 +1,317 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "55a68127f9733ec6bdb28077fd74ba4c",
+    "packages": [
+        {
+            "name": "nikic/fast-route",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "29c5bf70254d8ce59414646de3e9e43aafc9735e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/29c5bf70254d8ce59414646de3e9e43aafc9735e",
+                "reference": "29c5bf70254d8ce59414646de3e9e43aafc9735e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2014-03-04 15:05:38"
+        },
+        {
+            "name": "orno/di",
+            "version": "v2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orno/di.git",
+                "reference": "a73fcb8f406ef761e58c7bb11481ff721c8e1bac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orno/di/zipball/a73fcb8f406ef761e58c7bb11481ff721c8e1bac",
+                "reference": "a73fcb8f406ef761e58c7bb11481ff721c8e1bac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "suggest": {
+                "orno/cache": "Enables caching of reflection based resolution",
+                "orno/config": "Allows useage of config files rather than interacting with the container directly"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Orno\\Di": "src/",
+                    "OrnoTest": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Bennett",
+                    "email": "philipobenito@gmail.com"
+                }
+            ],
+            "description": "Orno Di is a small but powerful dependency injection container with automatic resolution of dependencies.",
+            "keywords": [
+                "container",
+                "dependency",
+                "di",
+                "injection",
+                "orno"
+            ],
+            "time": "2014-08-06 14:27:00"
+        },
+        {
+            "name": "orno/http",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orno/http.git",
+                "reference": "65d37f6f92f3357c234a592fdd57b2f54c2ef514"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orno/http/zipball/65d37f6f92f3357c234a592fdd57b2f54c2ef514",
+                "reference": "65d37f6f92f3357c234a592fdd57b2f54c2ef514",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/http-foundation": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orno\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Bennett",
+                    "email": "philipobenito@gmail.com"
+                }
+            ],
+            "description": "A wrapper for Symfony\\HttpFoundation with some encapsulation and convenience methods.",
+            "homepage": "http://github.com/orno/http",
+            "keywords": [
+                "http",
+                "orno",
+                "request",
+                "response"
+            ],
+            "time": "2014-03-05 10:22:10"
+        },
+        {
+            "name": "orno/route",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orno/route.git",
+                "reference": "55ffaeb6069e8c4091b37cbb071ba5c91b733055"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orno/route/zipball/55ffaeb6069e8c4091b37cbb071ba5c91b733055",
+                "reference": "55ffaeb6069e8c4091b37cbb071ba5c91b733055",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/fast-route": "0.1.*",
+                "orno/di": "2.*",
+                "orno/http": "1.*",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orno\\Route\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Bennett",
+                    "email": "hello@happyaccidents.me"
+                }
+            ],
+            "description": "Fast routing package combining Nikita Popov's FastRoute and Orno\\Di to provide route dispatching to dependency injected controllers.",
+            "keywords": [
+                "FastRoute",
+                "di",
+                "dispatcher",
+                "orno",
+                "route"
+            ],
+            "time": "2014-06-05 12:42:20"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v2.5.5",
+            "target-dir": "Symfony/Component/HttpFoundation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/HttpFoundation.git",
+                "reference": "650e115af152d7a5e857d01c2cdb9a22809de9b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/650e115af152d7a5e857d01c2cdb9a22809de9b4",
+                "reference": "650e115af152d7a5e857d01c2cdb9a22809de9b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/expression-language": "~2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "classmap": [
+                    "Symfony/Component/HttpFoundation/Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-09-25 09:52:29"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Routing",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Routing.git",
+                "reference": "6e43bd277f1f7e181a65b85813312f428e4926ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/6e43bd277f1f7e181a65b85813312f428e4926ab",
+                "reference": "6e43bd277f1f7e181a65b85813312f428e4926ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "psr/log": "~1.0",
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.4",
+                "symfony/http-foundation": "~2.3",
+                "symfony/yaml": "~2.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "For using the annotation loader",
+                "symfony/config": "For using the all-in-one router or any loader",
+                "symfony/expression-language": "For using expression matching",
+                "symfony/yaml": "For using the YAML loader"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Routing\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Routing Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "router",
+                "routing",
+                "uri",
+                "url"
+            ],
+            "time": "2014-10-09 16:12:58"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "symfony/routing": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}
