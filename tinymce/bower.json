@@ -1,0 +1,7 @@
+{
+	"name": "na",
+	"dependencies": {
+		"tinymce": "4.1.6"
+	},
+	"private": true
+}
