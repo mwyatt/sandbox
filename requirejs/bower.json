@@ -1,0 +1,11 @@
+{
+  "name": "requirejs",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.11.1",
+    "modernizr": "2.8.3",
+    "requirejs": "2.1.14",
+    "underscore": "~1.7.0"
+  },
+  "private": true
+}

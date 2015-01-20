@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    !function(global) {
+      'use strict';
+
+      var previousFancyInput = global.FancyInput;
+
+      function FancyInput(options) {
+        this.options = options || {};
+      }
+
+      FancyInput.noConflict = function noConflict() {
+        global.FancyInput = previousFancyInput;
+        return FancyInput;
+      };
+
+      global.FancyInput = FancyInput;
+    }(this);
+  </script>
+</body>
+</html>
