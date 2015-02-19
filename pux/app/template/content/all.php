@@ -1,0 +1,1 @@
+<div>all <?php echo $type ?></div>
