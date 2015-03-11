@@ -20,6 +20,25 @@ if (! $query) {
 	
 }
 
+$score = 0;
+$leven = [];
+foreach ($data as $product) {
+	$nameLen = strlen($product['name']);
+	$subLen = $nameLen - levenshtein($product['name'], $query);
+	$percent = $subLen / $nameLen;
+	$percent *= 100;
+	if ($percent > 50) {
+		$product['score'] = round($percent);
+		$leven[] = $product;
+	}
+}
+orderByProperty($leven, 'score');
+echo '<pre>';
+print_r($leven);
+echo '</pre>';
+exit;
+
+
 // perfect
 foreach ($data as $product) {
 	$match = false;
