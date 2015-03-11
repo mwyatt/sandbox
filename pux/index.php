@@ -22,6 +22,12 @@ $mux->get('asset/:path', ['AppName\\Controller\\Asset', 'single'], [
     'require' => ['path' => '.+']
 ]);
 
+echo '<pre>';
+print_r($mux->getRoutes());
+echo '</pre>';
+exit;
+
+
 $route = $mux->dispatch('/admin/post/create/');
 
 // route
