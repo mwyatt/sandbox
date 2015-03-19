@@ -5,30 +5,13 @@ require 'vendor/autoload.php'; // use PCRE patterns you need Pux\PatternCompiler
 use Pux\Executor;
 
 $mux = new Pux\Mux;
+$mux->get('/', ['AppName\\Controller\\Index', 'home']);
+$mux->get('/admin/', ['AppName\\Controller\\Index', 'home']);
+$muxContent = new Pux\Mux;
+$muxContent->get('/:type/', ['AppName\\Controller\\Content', 'all']);
+$mux->mount('/admin', $muxContent);
 
-// admin content
-$mux->get('/admin/:type/', ['AppName\\Controller\\Content', 'all']);
-$mux->get('/admin/:type/:id/', ['AppName\\Controller\\Content', 'single']);
-$mux->get('/admin/:type/create/', ['AppName\\Controller\\Content', 'create']);
-$mux->post('/admin/:type/create/', ['AppName\\Controller\\Content', 'singleUpdate']);
-$mux->post('/admin/:type/:id/', ['AppName\\Controller\\Content', 'singleUpdate']);
-$mux->delete('/admin/:type/:id/', ['AppName\\Controller\\Content', 'delete']);
-
-// home
-$mux->any('/', ['AppName\\Controller\\Index', 'home']);
-
-// asset
-$mux->get('asset/:path', ['AppName\\Controller\\Asset', 'single'], [
-    'require' => ['path' => '.+']
-]);
-
-echo '<pre>';
-print_r($mux->getRoutes());
-echo '</pre>';
-exit;
-
-
-$route = $mux->dispatch('/admin/post/create/');
+$route = $mux->dispatch('/admin/');
 
 // route
 try {

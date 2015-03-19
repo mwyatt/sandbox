@@ -7,6 +7,11 @@ class Content {
 
 
     public function all($type) {
+        echo '<pre>';
+        print_r($type);
+        echo '</pre>';
+        exit;
+        
         return include BASE_PATH . 'app/template/content/all.php';
     }
 
@@ -34,12 +39,7 @@ class Content {
 
     public function createSubmit($type)
     {
-        echo '<pre>';
-        print_r($_POST);
-        echo '</pre>';
-        $id = 5;
-
-        $this->singleSubmit($type, $id)        
+        
     }
 
 
