@@ -1,1 +1,8 @@
 wordpress/
+.htaccess
+
+# npm
+node_modules/
+
+# composer/bower
+vendor/

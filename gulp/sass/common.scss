@@ -1,0 +1,6 @@
+$foo: '#ccc';
+
+body {
+  background-color: $foo;
+  transition: all 200ms ease;
+}

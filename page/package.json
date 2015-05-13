@@ -1,0 +1,10 @@
+{
+  "site": "page",
+  "author": "Martin Wyatt",
+  "version": "0.1.0",
+  "devDependencies": {},
+  "browser": {},
+  "dependencies": {
+    "page": "^1.6.3"
+  }
+}
