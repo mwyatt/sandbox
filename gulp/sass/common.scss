@@ -1,6 +1,65 @@
 $foo: '#ccc';
 
+@keyframes foo-bar {
+  0% {
+    opacity: 0;
+    transform: rotate(50deg) scale(.5);
+  }
+  100% {
+    opacity: .8;
+    transform: rotate(360deg) scale(.8);
+  }
+}
+
 body {
   background-color: $foo;
   transition: all 200ms ease;
+}
+
+.container {
+  display: flex;
+}
+
+.item {
+  background-color: #eee;
+  margin: 1em;
+  padding: 6em;
+  animation: foo-bar;
+  // animation-delay: 200ms;
+  // animation-direction: ;
+  animation-duration : 500ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-name: foo-bar;
+  // animation-play-state : ;
+  // animation-timing-function: ;
+}
+
+.canvas {
+  width: 700px;
+  margin: 1em;
+  height: 530px;
+  background-color: #eee;
+}
+
+.canvas:hover .prop {
+  top: 200px;
+  left: 200px;
+  transform: rotate(35deg);
+}
+
+.canvas:active .prop {
+  top: 150px;
+  left: 300px;
+  transform: rotate(90deg);
+}
+
+.prop {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  transition: 500ms all cubic-bezier(.45, .15, .30, 1);
 }
