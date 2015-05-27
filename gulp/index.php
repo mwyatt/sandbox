@@ -3,6 +3,7 @@
 	<meta charset="UTF-8">
 	<title>Flexbox</title>
 	<link rel="stylesheet" href="asset/common.css">
+	<link rel="stylesheet" href="asset/foo/bar.css">
 </head>
 <body>
 	<div class="canvas">

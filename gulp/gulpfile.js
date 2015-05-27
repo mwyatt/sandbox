@@ -1,35 +1,51 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-// var pngquant = require('imagemin-pngquant');
-var browserSync = require('browser-sync').create();
 
-gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-        browsers: ['> 1%'],
-        cascade: false
-    }))
-    .pipe(gulp.dest('./asset'));
+// post css processor
+var postcss = require('gulp-postcss');
+
+  // css minify
+  var csswring = require('csswring');
+
+  // transition:
+  var autoprefixer = require('autoprefixer-core');
+
+  // --foo-bar
+  var cssvariables = require('postcss-css-variables');
+
+  // @import
+  var atImport = require('postcss-import');
+
+  var assets  = require('postcss-assets');
+
+
+var postcssProcessors = [
+  atImport,
+  cssvariables,
+  autoprefixer({browsers: ['last 1 version']}),
+  assets({
+    relativeTo: 'asset/',
+    loadPaths: ['asset/']
+  })
+];
+
+// css bundle files
+var css = ['./css/**/*.css', '!./css/**/_*.css'];
+
+function doPostCss () {
+  return gulp.src(css)
+    .pipe(postcss(postcssProcessors))
+    .pipe(gulp.dest('./asset'))
+}
+
+// css build
+gulp.task('css', function () {
+  return doPostCss();
 });
 
-gulp.task('image', function () {
-    return gulp.src('image/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('./asset'));
+// css build minify
+gulp.task('cssm', function () {
+  postcssProcessors.push(csswring);
+  return doPostCss();
 });
 
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+// js minify

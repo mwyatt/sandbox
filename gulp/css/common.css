@@ -1,18 +1,12 @@
-$foo: '#ccc';
+@import '_uncommon.css';
 
-@keyframes foo-bar {
-  0% {
-    opacity: 0;
-    transform: rotate(50deg) scale(.5);
-  }
-  100% {
-    opacity: .8;
-    transform: rotate(360deg) scale(.8);
-  }
+:root {
+  --foobar: 100px;
 }
 
 body {
-  background-color: $foo;
+  background-image: resolve('front/body.jpg');
+  width: var(--foobar);
   transition: all 200ms ease;
 }
 
@@ -24,15 +18,9 @@ body {
   background-color: #eee;
   margin: 1em;
   padding: 6em;
-  animation: foo-bar;
-  // animation-delay: 200ms;
-  // animation-direction: ;
   animation-duration : 500ms;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-name: foo-bar;
-  // animation-play-state : ;
-  // animation-timing-function: ;
 }
 
 .canvas {
@@ -62,4 +50,8 @@ body {
   height: 100px;
   background-color: #ccc;
   transition: 500ms all cubic-bezier(.45, .15, .30, 1);
+}
+
+@media only screen and (min-width: var(--foobar)) {
+  display: block;
 }
