@@ -6,3 +6,5 @@ node_modules/
 
 # composer/bower
 vendor/
+
+npm-debug.log

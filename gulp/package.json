@@ -5,6 +5,7 @@
     "csswring": "^3.0.5",
     "gulp": "^3.8.11",
     "gulp-postcss": "^5.1.8",
+    "gulp-imagemin": "2.2.1",
     "gulp-uglify": "^1.2.0",
     "postcss-assets": "^2.1.2",
     "postcss-color-function": "^1.2.0",

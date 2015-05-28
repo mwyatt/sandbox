@@ -7,6 +7,7 @@ var atImport = require('postcss-import');
 var mixins = require('postcss-mixins');
 var colorFunction = require("postcss-color-function")
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 
 var css = ['./css/**/*.css', '!./css/**/_*.css'];
 var processes = [
@@ -37,5 +38,11 @@ gulp.task('cssm', function () {
 gulp.task('jsm', function() {
   return gulp.src('asset/**/*.js')
     .pipe(uglify())
+    .pipe(gulp.dest('asset'));
+});
+
+gulp.task('imagemin', function () {
+  return gulp.src('media/*')
+    .pipe(imagemin())
     .pipe(gulp.dest('asset'));
 });
