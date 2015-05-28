@@ -1,10 +1,13 @@
-.new {
-	color: red;
-}
-
 body {
-  background-image: url('front/body.jpg');
+  clear: both;
+  clear: both;
+  &:hover {
+    background-color: blue;
+  }
+  /*background-image: url('front/body.jpg');*/
+  background-color: rgb(128, 0, 0);
   width: 100px;
+  height: 200px;
   transition: all 200ms ease;
 }
 
@@ -58,4 +61,8 @@ body {
 
 @media only screen and (min-width: var(--foobar)) {
   display: block;
+}
+
+.search {
+  clear: both;
 }

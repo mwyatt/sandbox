@@ -1,3 +1,13 @@
-.new {
-	color: red;
+@define-mixin clearfix {
+  clear: both;
+}
+
+@define-mixin thing {
+  clear: both;
+}
+
+:root {
+  --barsu: 200px;
+  --color-primary-1: red;
+  --foobar: 100px;
 }

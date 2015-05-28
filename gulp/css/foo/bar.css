@@ -1,4 +1,9 @@
-body {
-  background-image: resolve('bar.jpg');
+:root {
+  --barfoo: 200px;
+}
+
+.bar {
+  background-image: url('bar.jpg');
   color: red;
+  width: var(--barfoo);
 }

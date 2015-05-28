@@ -5,9 +5,12 @@
     "csswring": "^3.0.5",
     "gulp": "^3.8.11",
     "gulp-postcss": "^5.1.8",
+    "gulp-uglify": "^1.2.0",
     "postcss-assets": "^2.1.2",
-    "postcss-css-variables": "0.2.2",
+    "postcss-color-function": "^1.2.0",
+    "postcss-custom-properties": "^3.3.0",
     "postcss-import": "^5.2.2",
+    "postcss-mixins": "^0.3.0",
     "postcss-url": "^3.2.0"
   }
 }

@@ -1,12 +1,15 @@
 @import '_uncommon.css';
 
-:root {
-  --foobar: 100px;
-}
+@mixin button primary;
+
+
 
 body {
-  background-image: resolve('front/body.jpg');
+  @mixin clearfix;
+  /*background-image: url('front/body.jpg');*/
+  background-color: color(var(--color-primary-1) shade(50%));
   width: var(--foobar);
+  height: var(--barsu);
   transition: all 200ms ease;
 }
 
@@ -54,4 +57,8 @@ body {
 
 @media only screen and (min-width: var(--foobar)) {
   display: block;
+}
+
+.search {
+  @mixin clearfix;
 }
