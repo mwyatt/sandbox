@@ -65,10 +65,10 @@ var user = {
         console.log(ctx.params.id);
     }
 };
-page.base('/sandbox/page');
-page('/', index);
-page('/about/', okfoo);
-page('/user/:id', user.single);
+page.base('/sandbox/page/');
+page('', index);
+page('about/', okfoo);
+page('user/:id', user.single);
 function index () {
     console.log('index');
 }

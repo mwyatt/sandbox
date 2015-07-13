@@ -1,0 +1,15 @@
+{
+  "name": "img-async",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./js/common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browser": {
+    "foo/bar": "./js/foo/bar.js",
+    "jquery": "./bower_components/jquery/dist/jquery.js"
+  }
+}
