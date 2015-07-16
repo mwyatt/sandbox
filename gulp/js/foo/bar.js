@@ -1,0 +1,1 @@
+console.log('elttl/foo/bar.js');
