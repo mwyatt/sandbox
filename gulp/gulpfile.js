@@ -1,76 +1,72 @@
 var pkg = require('./package.json');
 var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var csswring = require('csswring');
-var autoprefixer = require('autoprefixer-core');
-var customProperties = require('postcss-custom-properties');
-var atImport = require('postcss-import');
-var mixins = require('postcss-mixins');
-var colorFunction = require("postcss-color-function")
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var source     = require('vinyl-source-stream');
 var browserify = require('browserify');
-var es         = require('event-stream');
-var glob       = require('glob');
+var source = require('vinyl-source-stream');
+var es = require('event-stream');
+var glob = require('glob');
+var uglify = require('gulp-uglify');
 var runSequence = require('run-sequence');
+var gutil = require('gulp-util');
+var clean = require('gulp-clean');
 
-
-var css = ['./css/**/*.css', '!./css/**/_*.css'];
-var processes = [
-  atImport(),
-  customProperties(),
-  colorFunction(),
-  mixins(),
-  autoprefixer({browsers: ['last 1 version']})
-];
-
-var action = {
-  postcss: function() {
-    return gulp.src(css)
-      .pipe(postcss(processes))
-      .pipe(gulp.dest('asset'));
-  }
-}
-
-gulp.task('css', function () {
-  return action.postcss();
+gulp.task('clean', function () {  
+  return gulp.src(['asset', 'js'], {read: false})
+    .pipe(clean());
 });
 
-gulp.task('cssm', function () {
-  process.push(csswring);
-  return action.postcss();
+gulp.task('clean/js', function () {  
+  return gulp.src(['js'], {read: false})
+    .pipe(clean());
 });
 
-gulp.task('js/copy', function() {
-  gulp.src('app/site/' + pkg.name + '/js/**/**.js')
+gulp.task('js/copy/admin', function() {
+  return gulp.src('app/admin/js/**/**.js')
+    .pipe(gulp.dest('js/admin'));
+});
+
+gulp.task('js/copy/site', function() {
+  return gulp.src('app/site/' + pkg.name + '/js/**/**.js')
     .pipe(gulp.dest('js'));
 });
 
-// copy all files from codex
-// copy all files from site
-// move to js/
-gulp.task('js', function() {
-  runSequence('js/copy', 'js/browserify');
+gulp.task('js/copy/codex', function() {
+  return gulp.src('app/site/codex/js/**/**.js')
+    .pipe(gulp.dest('js'));
+});
+
+gulp.task('js/uglify', function() {
+  gulp.src('asset/**/**.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('asset'));
 });
 
 gulp.task('js/browserify', function(done) {
   glob('js/**/**.bundle.js', function(err, files) {
-    if(err) done(err);
-
-    // map them to our stream function
+    if (err) {
+      done(err);
+    };
     var tasks = files.map(function(entry) {
       return browserify({
         entries: [entry],
         paths: ['node_modules', 'js']
       })
       .bundle()
-      .pipe(source(entry))
-      .pipe(uglify())
-      .pipe(gulp.dest('asset')); 
+      .pipe(source(entry.replace('js/', '')))
+      .pipe(gulp.dest('asset'));
     });
 
     // create a merged stream
     es.merge(tasks).on('end', done);
   });
+});
+
+gulp.task('js', function() {
+  runSequence(
+    'clean',
+    'js/copy/codex',
+    'js/copy/admin',
+    'js/copy/site',
+    'js/browserify',
+    'clean/js'
+  );
 });
