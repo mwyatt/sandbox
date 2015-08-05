@@ -1,0 +1,1 @@
+git ls-remote --heads git@github.com:mwyatt/mvc.git
