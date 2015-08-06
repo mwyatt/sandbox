@@ -9,3 +9,5 @@ vendor/
 
 npm-debug.log
 bower_components/
+
+swiftmail/config.php
