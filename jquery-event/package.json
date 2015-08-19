@@ -1,0 +1,25 @@
+{
+  "name": "jquery-event",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "bean": "^1.0.15",
+    "bonzo": "^2.0.0",
+    "browserify": "^11.0.1",
+    "event-stream": "^3.3.1",
+    "glob": "^5.0.14",
+    "gulp": "^3.9.0",
+    "nanoajax": "^0.3.1",
+    "qwery": "^4.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
