@@ -1,6 +1,5 @@
 <?php 
 
-if (isset($_REQUEST['example'])) {
-	var_dump(isset($example));
+if (!empty($_GET['foo']) && $_GET['foo'] == 'bar') {
+	echo 'resolves seperatly!';
 }
-	

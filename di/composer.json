@@ -1,0 +1,15 @@
+{
+    "name": "root/di",
+    "authors": [
+        {
+            "name": "mwyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Happy\\": ["src"]
+        }
+    }
+}

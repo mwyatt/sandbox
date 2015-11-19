@@ -8,12 +8,7 @@
 <p>good1</p>
 <p>good2</p>
 	<script>
-		var qwery;
-		var bonzo;
-
-		function $(selector) {
-		  return bonzo(qwery(selector));
-		};
+		var $;
 	</script>
 	<script type="text/javascript" src="asset/common.js"></script>
 </body>
