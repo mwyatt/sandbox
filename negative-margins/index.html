@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Negative Margins</title>
+    <style>
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+    
+        :root {
+            font-family: Arial;
+        }
+        
+        .page-wrap {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .thing-container {
+                width: auto;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    max-width: none;
+                        height: 200px;
+        }
+
+        .thing {
+            background-color: #eee;
+                    padding: 9px;
+        }
+
+        .thing-wrap {
+            float: left;
+            padding: 0 10px 20px;
+        }
+
+        @media only screen and (min-width: 0px) {
+            .thing-wrap {width: 100%;}
+        }
+
+        @media only screen and (min-width: 200px) {
+            .thing-wrap {width: 50%;}
+        }
+
+        @media only screen and (min-width: 400px) {
+            .thing-wrap {width: 25%;}
+        }
+
+        @media only screen and (min-width: 600px) {
+            .thing-wrap {width: 20%;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+        <hr>
+        <div class="thing-container">
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+            <div class="thing-wrap"><div class="thing">Thing</div></div>
+        </div>
+        <hr>
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+</body>
+</html>

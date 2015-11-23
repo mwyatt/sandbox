@@ -5,6 +5,9 @@ $response = trim(file_get_contents('example2.xml'));
 $response = new SimpleXmlElement($response);
 // $response = $response->getNameSpaces(true);
 
+
+
+
 echo '<pre>';
 print_r($response);
 echo '</pre>';

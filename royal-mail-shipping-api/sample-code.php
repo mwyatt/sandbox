@@ -6,7 +6,6 @@ $api_service_type = 'fast?';
 $api_service_code = 'huh?';
 $api_service_format = 'huh?';
 
-
 $time = gmdate('Y-m-d\TH:i:s');
 $created = gmdate('Y-m-d\TH:i:s\Z');
 $nonce = mt_rand();
@@ -38,21 +37,21 @@ $client = new \SoapClient('ShippingAPI_V2_0_8.wsdl', [
 // $client = new SoapClient('ShippingAPI_V2_0_8.wsdl', $soapclient_options);
 // $client->__setLocation($soapclient_options['location']);
 
-//headers needed for royal mail
+// headers needed for royal mail
 $HeaderObjectXML  = '<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
 xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
 <wsse:UsernameToken wsu:Id="UsernameToken-000">
 <wsse:Username>'. $api_application_id .'</wsse:Username>
-<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">'.$passwordDigest.'</wsse:Password>
-<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">'.$ENCODEDNONCE.'</wsse:Nonce>
-<wsu:Created>'.$created.'</wsu:Created>
+<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">' . $passwordDigest . '</wsse:Password>
+<wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">' . $ENCODEDNONCE . '</wsse:Nonce>
+<wsu:Created>' . $created . '</wsu:Created>
 </wsse:UsernameToken>
 </wsse:Security>';
 
-//push the header into soap
+// push the header into soap
 $HeaderObject = new SoapVar( $HeaderObjectXML, XSD_ANYXML );
 
-//push soap header
+// push soap header
 $header = new SoapHeader( 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd', 'Security', $HeaderObject );
 $client->__setSoapHeaders($header);
 
@@ -98,7 +97,7 @@ $request = array(
 );
 
 
-//if any enhancements, add it into the array
+// if any enhancements, add it into the array
 if(!empty($api_service_enhancements)) {
 $request['requestedShipment']['serviceEnhancements'] = array('enhancementType' => array('serviceEnhancementCode' => array('code' => $api_service_enhancements)));
 }
@@ -113,7 +112,7 @@ echo "REQUEST:\n" . $client->__getLastRequest() . "\n";
 die;
 }
 
-
+    
 
 //check for any errors
 if(isset($response->integrationFooter->errors)) { 

@@ -6,10 +6,21 @@ class Index
 {
 
 
-	public function home($anything)
+	public function home()
 	{
 		echo '<pre>';
-		print_r($anything['id']);
+		print_r('$request');
+		echo '</pre>';
+		exit;
+		
+		
+	}
+
+
+	public function foo($request)
+	{
+		echo '<pre>';
+		print_r($request);
 		echo '</pre>';
 		exit;
 		
