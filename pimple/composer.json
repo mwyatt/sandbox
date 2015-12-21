@@ -1,0 +1,12 @@
+{
+    "name": "root/pimple",
+    "require": {
+        "pimple/pimple": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "mwyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ]
+}
