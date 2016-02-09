@@ -1,0 +1,12 @@
+{
+    "name": "root/doctrine-dbal",
+    "require": {
+        "doctrine/dbal": "^2.5"
+    },
+    "authors": [
+        {
+            "name": "mwyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ]
+}

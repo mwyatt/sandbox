@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <SOAP-ENV:Body>
+      <createShipmentResponse xmlns="http://www.royalmailgroup.com/api/ship/V2">
+         <integrationHeader>
+            <dateTime xmlns="http://www.royalmailgroup.com/integration/core/V1">2015-11-12T08:52:03</dateTime>
+            <version xmlns="http://www.royalmailgroup.com/integration/core/V1">2</version>
+            <identification xmlns="http://www.royalmailgroup.com/integration/core/V1">
+               <applicationId>0127229000</applicationId>
+               <transactionId>730222611</transactionId>
+            </identification>
+         </integrationHeader>
+         <completedShipmentInfo>
+            <status>
+               <status xmlns="">
+                  <statusCode>
+                     <code>Allocated</code>
+                  </statusCode>
+               </status>
+               <validFrom xmlns="">2015-11-12T20:10:32.000+02:00</validFrom>
+            </status>
+            <allCompletedShipments>
+               <completedShipments>
+                  <weight>
+                     <unitOfMeasure xmlns="">
+                        <unitOfMeasureCode>
+                           <code>g</code>
+                        </unitOfMeasureCode>
+                     </unitOfMeasure>
+                     <value xmlns="">100</value>
+                  </weight>
+                  <shipments>
+                     <shipmentNumber>TTT001089843GB</shipmentNumber>
+                     <shipment>
+                        <shipmentNumber>TTT001089843GB</shipmentNumber>
+                        <itemID>1</itemID>
+                        <status>
+                           <status xmlns="">
+                              <statusCode>
+                                 <code>Allocated</code>
+                              </statusCode>
+                           </status>
+                           <validFrom xmlns="">2015-11-12T20:10:32.000+02:00</validFrom>
+                        </status>
+                     </shipment>
+                  </shipments>
+               </completedShipments>
+            </allCompletedShipments>
+            <requestedShipment>
+               <shipmentType>
+                  <code xmlns="">Delivery</code>
+               </shipmentType>
+               <serviceOccurrence>1</serviceOccurrence>
+               <serviceType>
+                  <code xmlns="">1</code>
+               </serviceType>
+               <serviceOffering>
+                  <serviceOfferingCode xmlns="">
+                     <code>CRL</code>
+                  </serviceOfferingCode>
+               </serviceOffering>
+               <serviceFormat>
+                  <serviceFormatCode xmlns="">
+                     <code>P</code>
+                  </serviceFormatCode>
+               </serviceFormat>
+               <serviceEnhancements>
+                  <enhancementType>
+                     <serviceEnhancementCode xmlns=""/>
+                  </enhancementType>
+               </serviceEnhancements>
+               <shippingDate>2015-11-02</shippingDate>
+               <recipientContact>
+                  <name>Mr Tom Smith</name>
+                  <complementaryName>Department 98</complementaryName>
+                  <telephoneNumber>
+                     <countryCode xmlns="">0044</countryCode>
+                     <telephoneNumber xmlns="">07801123456</telephoneNumber>
+                  </telephoneNumber>
+                  <electronicAddress>
+                     <electronicAddress xmlns="">tom.smith@royalmail.com</electronicAddress>
+                  </electronicAddress>
+               </recipientContact>
+               <recipientAddress>
+                  <addressLine1 xmlns="">Mount Pleasant</addressLine1>
+                  <postTown xmlns="">LONDON</postTown>
+                  <postcode xmlns="">EC1A 1BB</postcode>
+                  <country xmlns="">
+                     <countryCode>
+                        <code>GB</code>
+                     </countryCode>
+                  </country>
+               </recipientAddress>
+               <items>
+                  <item>
+                     <numberOfItems>1</numberOfItems>
+                     <weight>
+                        <unitOfMeasure xmlns="">
+                           <unitOfMeasureCode>
+                              <code>g</code>
+                           </unitOfMeasureCode>
+                        </unitOfMeasure>
+                        <value xmlns="">100</value>
+                     </weight>
+                  </item>
+               </items>
+               <customerReference>CustSuppRef1</customerReference>
+               <senderReference>SenderReference1</senderReference>
+            </requestedShipment>
+         </completedShipmentInfo>
+         <integrationFooter>
+            <warnings xmlns="http://www.royalmailgroup.com/integration/core/V1">
+               <warning>
+                  <warningCode>W0021</warningCode>
+                  <warningDescription>The shippingDate specified is in the past. This has been defaulted to today's date</warningDescription>
+               </warning>
+               <warning>
+                  <warningCode>W0036</warningCode>
+                  <warningDescription>E-mail option not selected so e-mail address will be ignored</warningDescription>
+               </warning>
+               <warning>
+                  <warningCode>W0035</warningCode>
+                  <warningDescription>SMS option not selected so Telephone Number will be ignored</warningDescription>
+               </warning>
+            </warnings>
+         </integrationFooter>
+      </createShipmentResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

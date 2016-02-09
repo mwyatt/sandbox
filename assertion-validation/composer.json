@@ -1,0 +1,12 @@
+{
+    "name": "root/assertion-validation",
+    "require": {
+        "beberlei/assert": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "mwyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ]
+}

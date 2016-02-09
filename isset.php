@@ -1,5 +1,7 @@
 <?php 
+echo '<pre>';
+print_r($noval['no']);
+echo '</pre>';
+exit;
 
-if (!empty($_GET['foo']) && $_GET['foo'] == 'bar') {
-	echo 'resolves seperatly!';
-}
+var_dump(empty($noval['no']));
