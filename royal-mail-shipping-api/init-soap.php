@@ -1,5 +1,8 @@
 <?php
 
+ini_set('soap.wsdl_cache_enabled',0);
+ini_set('soap.wsdl_cache_ttl',0);
+
 // key settings
 $applicationId = '0127229000';
 $applicationPassword = '%s[FSY!HY&"&`j7U';
@@ -23,13 +26,15 @@ $headerXml = '
 $headerSoapVar = new \SoapVar($headerXml, XSD_ANYXML);
 $soapHeader = new \SoapHeader('http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd', 'Security', $headerSoapVar);
 
-$soapClient = new \SoapClient('ShippingAPI_V2_0_8.wsdl', [
+$soapClient = new \SoapClient('./ShippingAPI_V2_0_8.wsdl', [
     'cache_wsdl' => 'WSDL_CACHE_NONE',
-    'local_cert' => '/etc/ssl/certs/royalmail/rm_bundle.pem',
+    'local_cert' => '/etc/ssl/certs/royal-mail/rm_bundle.pem',
     'passphrase' => $applicationPassword,
     'trace' => true,
     'ssl_method' => 'SOAP_SSL_METHOD_SSLv3',
-    'location' => 'https://api.royalmail.com/shipping/onboarding'
+    'location' => 'https://api.royalmail.com/shipping/onboarding',
+    'connection_timeout' => 999999,
+    'default_socket_timeout' => 999999
 ]);
 $soapClient->__setSoapHeaders($soapHeader);
 
@@ -64,7 +69,7 @@ $requestCreateShipment = [
     'requestedShipment' => [
         'shipmentType' => ['code' => 'Delivery'],
         'serviceType' => ['code' => 'CRL'],
-        'serviceOffering' => ['serviceOfferingCode' => ['code' => 'C']],
+        'serviceOffering' => ['serviceOfferingCode' => ['code' => 'CRL']],
         'shippingDate' => date('Y-m-d'),
         'recipientContact' => [
             'name' => $data->shippingName,
