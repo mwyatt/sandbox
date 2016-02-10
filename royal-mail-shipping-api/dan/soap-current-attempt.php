@@ -101,13 +101,13 @@ try {
     var_dump($response);
     exit;
 
-    echo '<pre>';
-    print_r($response);
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r($response);
+    // echo '</pre>';
 } catch (Exception $exception) {
-    echo '<pre>';
-    print_r($exception->getMessage());
-    echo '<pre>';
+    // echo '<pre>';
+    // print_r($exception->getMessage());
+    // echo '<pre>';
     header("Content-type: text/xml;charset=utf-8");
     echo $soapClient->__getLastRequest();
     // print_r("REQUEST:\n" .  . "\n");

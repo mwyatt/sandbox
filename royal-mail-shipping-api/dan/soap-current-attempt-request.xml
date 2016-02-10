@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.royalmailgroup.com/integration/core/V1" xmlns:ns2="http://www.royalmailgroup.com/api/ship/V2" xmlns:ns3="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"><SOAP-ENV:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:UsernameToken wsu:Id="UsernameToken-0000">
+            <wsse:Username>0127229000</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">OOCnd8Td9AqC5bmgw4dOjzzbIZc=</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">MTU3NTA0NTE4OQ==</wsse:Nonce>
+            <wsu:Created>2016-02-10T14:29:43</wsu:Created>
+        </wsse:UsernameToken>
+    </wsse:Security>
+</SOAP-ENV:Header><SOAP-ENV:Body><ns2:createShipmentRequest><ns2:integrationHeader><ns1:dateTime>2016-02-10T14:29:43</ns1:dateTime><ns1:version>2</ns1:version><ns1:identification><ns1:applicationId>0127229000</ns1:applicationId><ns1:transactionId></ns1:transactionId></ns1:identification></ns2:integrationHeader><ns2:requestedShipment><ns2:shipmentType><code>Delivery</code></ns2:shipmentType><ns2:serviceType><code>D</code></ns2:serviceType><ns2:serviceOffering><serviceOfferingCode><code>CRL</code></serviceOfferingCode></ns2:serviceOffering><ns2:shippingDate>2016-02-10</ns2:shippingDate><ns2:recipientContact><ns2:name>Martin Wyatt</ns2:name></ns2:recipientContact><ns2:recipientAddress><addressLine1>Unit 2 The Sidings</addressLine1><postTown>Bacup</postTown><postcode>OL</postcode></ns2:recipientAddress><ns2:items><ns2:item><ns2:numberOfItems>0</ns2:numberOfItems><ns2:weight><unitOfMeasure><unitOfMeasureCode><code>g</code></unitOfMeasureCode></unitOfMeasure><value>50</value></ns2:weight></ns2:item></ns2:items></ns2:requestedShipment></ns2:createShipmentRequest></SOAP-ENV:Body></SOAP-ENV:Envelope>
