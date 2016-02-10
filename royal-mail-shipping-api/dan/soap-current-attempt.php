@@ -9,7 +9,7 @@ ini_set('soap.wsdl_cache_ttl',0);
 
 // key settings
 $applicationId = '0127229000';
-$applicationPassword = '%s[FSY!HY&"&`j7U';
+$applicationPassword = 'xxxx';
 $creationDate = gmdate('Y-m-d\TH:i:s');
 $nonce = mt_rand();
 $nonceDatePassword = pack("A*", $nonce) . pack("A*", $creationDate) . pack("H*", sha1($applicationPassword));
