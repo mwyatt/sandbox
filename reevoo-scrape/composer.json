@@ -1,0 +1,12 @@
+{
+    "name": "martin/reevoo-scrape",
+    "require": {
+        "electrolinux/phpquery": "^0.9.6"
+    },
+    "authors": [
+        {
+            "name": "Martin Wyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ]
+}
