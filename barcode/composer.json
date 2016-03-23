@@ -1,0 +1,15 @@
+{
+    "name": "martin/barcode",
+    "require": {
+        "milon/barcode": "^5.2",
+        "knplabs/knp-snappy": "^0.4.3",
+        "h4cc/wkhtmltopdf-i386": "0.12.x",
+        "h4cc/wkhtmltoimage-i386": "0.12.x"
+    },
+    "authors": [
+        {
+            "name": "Martin Wyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ]
+}
