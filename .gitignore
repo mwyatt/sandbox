@@ -1,6 +1,6 @@
-node_modules/
-vendor/
+node_modules
+vendor
 npm-debug.log
-bower_components/
+bower_components
 swiftmail/config.php
 client_secret*
