@@ -1,15 +1,6 @@
-wordpress/
-.htaccess
-
-# npm
 node_modules/
-
-# composer/bower
 vendor/
-
 npm-debug.log
 bower_components/
-
 swiftmail/config.php
-
 client_secret*
