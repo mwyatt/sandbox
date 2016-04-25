@@ -8,11 +8,20 @@ var user = {
 page.base('/sandbox/page/');
 page('', index);
 page('about/', okfoo);
-page('user/:id', user.single);
+page('/user/:id/', user.single, function() {
+  console.log('lol');
+});
+
 function index () { 
     console.log('index');
 }
+
 function okfoo () {
     console.log('okfoo');
 }
-page();
+
+page(function() {
+  console.log('generic middleware');
+})
+
+// page({dispatch: false});
