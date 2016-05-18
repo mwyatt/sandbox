@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Center Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+
+/*he basics for vertical align: Container with position:relative, image with position:absolute. Then add fixed height and top:50%; margin-top:-height/2. Finally adjust for different media queries.*/
+
+      .img-container {
+        width: 100%;
+        margin: 2em 0;
+      }
+
+      .img-container-cell {
+        vertical-align: center;
+        border: 1px dotted red;
+        text-align: center;
+        height: 340px;
+      }
+
+      .img-container-cell-img {
+        max-width: 240px;
+        max-height: 240px;
+      }
+
+      @media only screen and (min-width: 500px) {
+        .img-container-cell-img {
+          max-width: 340px;
+          max-height: 340px;
+        }
+      }
+
+    </style>
+</head>
+<body>
+
+<table class="img-container">
+  <tr><td class="img-container-cell">
+    <img class="img-container-cell-img" src="http://placehold.it/640x480" />
+  </td></tr>
+</table>
+
+<table class="img-container">
+  <tr><td class="img-container-cell">
+    <img class="img-container-cell-img" src="http://placehold.it/640x100" />
+  </td></tr>
+</table>
+
+<table class="img-container">
+  <tr><td class="img-container-cell">
+    <img class="img-container-cell-img" src="http://placehold.it/100x640" />
+  </td></tr>
+</table>
+
+</body>
+</html>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
