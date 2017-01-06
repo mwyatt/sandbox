@@ -1,8 +1,0 @@
-CACHE MANIFEST
-/ hello/
-/ world/
-
-FALLBACK:
-/ fallback.html
-
-#v0.0.2

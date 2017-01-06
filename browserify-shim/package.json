@@ -1,0 +1,16 @@
+{
+  "name": "browserify-shimz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "browserify": {
+    "transform": ["browserify-shim"]
+  },
+  "browserify-shim": {
+    "jquery": "global:$",
+    "mustache": "global:Mustache"
+  },
+  "dependencies": {
+    "browserify-shim": "^3.8.12",
+    "mwyatt-dialogue": "0.5.1"
+  }
+}
