@@ -1,0 +1,13 @@
+# general
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+IndexIgnore */*
+
+<LimitExcept GET POST>
+  Order Allow,Deny
+  Deny from all
+</LimitExcept>
+
+# all other requests
+RewriteRule ^.*$ index.php [L]
