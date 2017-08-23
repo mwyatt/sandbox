@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sortablejs Drag and Drop</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+</head>
+<body>
+    <h1>All animals are equal, but some are more equal than others.</h1>
+    <h2>Order the animals by importance</h2>
+
+  <div class="list-group js-animals">
+      <div class="list-group-item">Cat</div>
+      <div class="list-group-item">Dog</div>
+      <div class="list-group-item">Cow</div>
+      <div class="list-group-item">Pig</div>
+  </div>
+<h2>What are your favourite farmer names?</h2>
+
+    <div class="list-group js-farmers">
+      <div class="list-group-item">Bill</div>
+      <div class="list-group-item">Bob</div>
+      <div class="list-group-item">Peter</div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.5.1/Sortable.min.js"></script>
+  <script>
+
+    Sortable.create(document.querySelector('.js-farmers'), {
+    group: 'group-name',
+    onAdd: function(event) {
+      alert('Item moved into farmers.')
+    },
+    });
+      
+    Sortable.create(document.querySelector('.js-animals'), {
+    group: 'group-name',
+    onAdd: function(event) {
+      alert('Item moved into animals.')
+    },
+    });
+      
+  </script>
+</body>
+</html>
+
+
